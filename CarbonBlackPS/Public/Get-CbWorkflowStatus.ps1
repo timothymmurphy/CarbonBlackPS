@@ -23,7 +23,6 @@ function Get-CbWorkflowStatus {
         UriPreOrgKey  = "/appservices/v6/orgs/"
         UriPostOrgKey = "/workflow/status/$RequestID"
         Method        = "Get"
-        Body          = $jsonBody
     }
 
     $result = Invoke-CbMethod @Parameters
