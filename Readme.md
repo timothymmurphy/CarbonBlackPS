@@ -36,3 +36,4 @@ A PowerShell API wrapper for Carbon Black.
 - Get-CbAlert
 - Get-CbFacetAlert
 - Set-CbAlert
+- Set-CbAlertBulk
