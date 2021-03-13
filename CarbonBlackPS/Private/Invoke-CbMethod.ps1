@@ -36,10 +36,13 @@ function Invoke-CbMethod {
         Uri         = $targetUrl
         Method      = $Method
         Headers     = $headers
-        Body        = $Body
     }
-    # Invoke the API
 
+    if ($Body) {
+        $splatParameters.Add("Body", $Body)
+    }
+
+    # Invoke the API
     try {
         $webResponse = Invoke-RestMethod @splatParameters
     }
