@@ -43,3 +43,4 @@ A PowerShell API wrapper for Carbon Black.
 - Get-CbAlertSuggestion
 - New-CbAlertNote
 - Get-CbAlertNote
+- Remove-CbAlertNote
