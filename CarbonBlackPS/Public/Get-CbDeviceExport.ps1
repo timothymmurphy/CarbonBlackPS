@@ -1,6 +1,6 @@
 <#
     .SYNOPSIS
-    Search devices within Carbon Black. 
+    Exports CSV of devices matching search.
     Official Carbon Black documentation: https://developer.carbonblack.com/reference/carbon-black-cloud/platform/latest/devices-api/#export-devices-csv
     
     .PARAMETER Search
