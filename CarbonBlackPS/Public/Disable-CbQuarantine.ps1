@@ -23,10 +23,10 @@ function Disable-CbQuarantine {
     [CmdletBinding(SupportsShouldProcess)]
     param (
 
-        [Parameter(ParameterSetName='ComputerName')]
+        [Parameter(ParameterSetName='ComputerName', Mandatory=$true)]
         [string]$ComputerName,
 
-        [Parameter(ParameterSetName='SensorID')]
+        [Parameter(ParameterSetName='SensorID', Mandatory=$true)]
         [int]$SensorID
 
     )
