@@ -17,10 +17,12 @@ A PowerShell API wrapper for Carbon Black.
       - Note: Environment will vary - see [here](https://developer.carbonblack.com/reference/carbon-black-cloud/authentication/#constructing-your-request) for more details.
 
 # Commands
-## Devices
+## Device Information
 - Get-CbDevice
 - Get-CbDeviceExport
 - Get-CbFacetDevice
 ## Device Actions
 - Enable-CbQuarantine
 - Disable-CbQuarantine
+- Enable-CbBypass
+- Disable-CbBypass
