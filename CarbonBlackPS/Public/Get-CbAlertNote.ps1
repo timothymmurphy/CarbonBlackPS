@@ -4,7 +4,7 @@
     Official Carbon Black documentation: https://developer.carbonblack.com/reference/carbon-black-cloud/platform/latest/alerts-api/#get-notes
     
     .PARAMETER AlertID
-    Alert ID of the alert to attach the note to    
+    Alert ID of the alert to get note information from  
 
     .EXAMPLE
     Get-CbAlertNote -AlertID $alertID 
