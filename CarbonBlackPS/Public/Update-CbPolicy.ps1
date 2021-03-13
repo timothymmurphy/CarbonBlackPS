@@ -68,7 +68,7 @@ function Update-CbPolicy {
         Body       = $jsonBody
     }
 
-    if ($PSCmdlet.ShouldProcess($device.name, "update policy")) {
+    if ($PSCmdlet.ShouldProcess($device.name, "change Policy ID to $PolicyID")) {
         $result = Invoke-CbMethod @Parameters
         $result
     }
