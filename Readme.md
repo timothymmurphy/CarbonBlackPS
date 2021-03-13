@@ -40,3 +40,4 @@ A PowerShell API wrapper for Carbon Black.
 - Set-CbThreat
 - Set-CbThreatBulk
 - Get-CbWorkflowStatus
+- Get-CbAlertSuggestion
