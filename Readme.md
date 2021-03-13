@@ -32,3 +32,5 @@ A PowerShell API wrapper for Carbon Black.
 - Update-CbSensor
 - Uninstall-CbSensor
 - Remove-CbSensor
+## Alerts
+- Get-CbAlert
