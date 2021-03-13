@@ -23,3 +23,4 @@ A PowerShell API wrapper for Carbon Black.
 - Get-CbFacetDevice
 ## Device Actions
 - Enable-CbQuarantine
+- Disable-CbQuarantine
