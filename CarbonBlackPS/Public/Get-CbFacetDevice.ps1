@@ -9,15 +9,9 @@
     .PARAMETER Rows
     Maximum number of rows to return
     
-    .PARAMETER Start
-    Row to begin returning results from
+    .PARAMETER Field
+    Field to facet results on
     
-    .PARAMETER SortField
-    Field to sort results on. Must be used in conjunction with -SortOrder parameter
-  
-    .PARAMETER SortOrder
-    Specifies ascending or descending order for sorting
-  
     .PARAMETER ExcludeVersion
     Exclude certain version of the sensor from results. 
     Format: os:#.#.#.#; e.g. -ExcludeVersion windows:3.6.0.1979
@@ -61,8 +55,6 @@ function Get-CbFacetDevice {
 
         [int]$Rows,
 
-        [int]$Start,
-
         [ValidateSet("policy_id", "status", "os", "ad_group_id")]
         [Parameter(Mandatory=$true)]
         [string]$Field,
@@ -104,7 +96,6 @@ function Get-CbFacetDevice {
 
     if ($Search) {$psObjBody | Add-Member -Name "query" -Value $Search -MemberType NoteProperty}
     if ($Rows) {$psObjBody.terms | Add-Member -Name "rows" -Value $Rows -MemberType NoteProperty}
-    if ($Start) {$psObjBody | Add-Member -Name "start" -Value $Start -MemberType NoteProperty}
     if ($ExcludeVersion) {
         $psObjBody | Add-Member -Name "exclusions" -Value ([PSCustomObject]@{}) -MemberType NoteProperty
         $psObjBody.exclusions | Add-Member -Name "sensor_version" -Value @($ExcludeVersion) -MemberType NoteProperty
