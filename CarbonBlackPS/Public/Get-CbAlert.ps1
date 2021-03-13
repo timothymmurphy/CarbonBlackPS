@@ -125,6 +125,7 @@ function Get-CbAlert {
 
         [string]$FileHash,
 
+        [ValidateSet("KNOWN_MALWARE", "SUSPECT_MALWARE", "PUP", "NOT_LISTED", "ADAPTIVE_WHITE_LIST", "COMMON_WHITE_LIST", "TRUSTED_WHITE_LIST", "COMPANY_BLACK_LIST")]
         [string]$Reputation,
 
         [string]$Tag,
@@ -136,7 +137,10 @@ function Get-CbAlert {
 
         [string]$Type,
 
-        [string]$Workflow
+        [string]$Workflow,
+
+        [ValidateSet("THREAT", "MONITORED")]
+        [string]$Category
     )
 
     $jsonBody = "{
@@ -189,6 +193,7 @@ function Get-CbAlert {
         if ($Username) {$psObjBody.criteria | Add-Member -Name "device_username" -Value @($Username) -MemberType NoteProperty}
         if ($Type) {$psObjBody.criteria | Add-Member -Name "type" -Value @($Type) -MemberType NoteProperty}
         if ($Workflow) {$psObjBody.criteria | Add-Member -Name "workflow" -Value @($Workflow) -MemberType NoteProperty}
+        if ($Category) {$psObjBody.criteria | Add-Member -Name "category" -Value @($Category) -MemberType NoteProperty}
     }
 
     $jsonBody = $psObjBody | ConvertTo-Json
