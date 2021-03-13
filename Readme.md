@@ -26,3 +26,5 @@ A PowerShell API wrapper for Carbon Black.
 - Disable-CbQuarantine
 - Enable-CbBypass
 - Disable-CbBypass
+- Enable-CbBackgroundScan
+- Disable-CbBackgroundScan
