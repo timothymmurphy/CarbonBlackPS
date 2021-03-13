@@ -19,3 +19,4 @@ A PowerShell API wrapper for Carbon Black.
 # Commands
 ## Devices
 - Get-CbDevice
+- Get-CbDeviceExport
