@@ -38,3 +38,4 @@ A PowerShell API wrapper for Carbon Black.
 - Set-CbAlert
 - Set-CbAlertBulk
 - Set-CbThreat
+- Set-CbThreatBulk
