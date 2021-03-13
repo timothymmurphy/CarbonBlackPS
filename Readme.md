@@ -34,3 +34,4 @@ A PowerShell API wrapper for Carbon Black.
 - Remove-CbSensor
 ## Alerts
 - Get-CbAlert
+- Get-CbFacetAlert
