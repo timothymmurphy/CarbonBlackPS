@@ -50,7 +50,7 @@
     Search criteria for status
    
     .EXAMPLE
-    Get-CbDevice -Search "Querystring"
+    Get-CbDevice -Search "Query"
    
     .EXAMPLE
     Get-CbDevice -OperatingSystem "Linux" -SortField "last_contact_time" -SortOrder "asc" -PolicyID linux:156249
@@ -58,7 +58,7 @@
     Returns results for all Linux machines in a given policy, sorted in ascending order by last contact time.
     
     .EXAMPLE
-    Get-CbDevice -Search "Querystring" -ExcludeVersion "windows:3.6.0.1979"
+    Get-CbDevice -Search "Query" -ExcludeVersion "windows:3.6.0.1979"
 
     Returns results for all machines matching the search except for Windows machines running sensor version 3.6.0.1979
 #>
