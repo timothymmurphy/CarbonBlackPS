@@ -29,3 +29,4 @@ A PowerShell API wrapper for Carbon Black.
 - Enable-CbBackgroundScan
 - Disable-CbBackgroundScan
 - Update-CbPolicy
+- Update-CbSensor
