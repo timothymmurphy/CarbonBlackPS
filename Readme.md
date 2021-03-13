@@ -42,3 +42,4 @@ A PowerShell API wrapper for Carbon Black.
 - Get-CbWorkflowStatus
 - Get-CbAlertSuggestion
 - New-CbAlertNote
+- Get-CbAlertNote
