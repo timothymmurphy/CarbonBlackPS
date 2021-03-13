@@ -74,6 +74,9 @@
 
     .PARAMETER Workflow
     Search criteria for workflow
+
+    .PARAMETER Category
+    Search criteria for category
    
     .EXAMPLE
     Get-CbAlert -Search "Query"
