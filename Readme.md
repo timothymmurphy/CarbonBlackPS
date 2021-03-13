@@ -6,8 +6,8 @@ A PowerShell API wrapper for Carbon Black.
 # Setup
 
 1. Extract `CarbonBlackPS` folder contents to one of the following directories:
-    - `C:\Users\$username\Documents\WindowsPowerShell\Modules\` (local user scoped installation)
-    - `C:\Program Files\WindowsPowerShell\Modules\` (global system installation)
+    - `C:\Users\$username\Documents\WindowsPowerShell\Modules\CarbonBlackPS` (local user scoped installation)
+    - `C:\Program Files\WindowsPowerShell\Modules\CarbonBlackPS` (global system installation)
     
 2. Open PowerShell and Run `Import-Module CarbonBlackPS` to import the module  
 
