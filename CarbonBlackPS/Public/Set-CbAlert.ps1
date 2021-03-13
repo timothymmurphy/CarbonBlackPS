@@ -9,11 +9,14 @@
     .PARAMETER State
     Workflow state to set. Options are "DISMISSED" or "OPEN"    
 
-    .PARAMETER Comment
+    .PARAMETER RemediationState
     Description or justification for the change  
 
+    .PARAMETER Comment
+    Comment to include with the operation
+
     .EXAMPLE
-    Set-CbAlert -AlertID $alertID -State DISMISSED -Comment "False-positive"
+    Set-CbAlert -AlertID $alertID -State DISMISSED -RemediationState "Remediated" -Comment "Validated by Tim"
 #>
 
 function Set-CbAlert {
@@ -27,6 +30,8 @@ function Set-CbAlert {
         [ValidateSet("DISMISSED", "OPEN")]
         [string]$State,
 
+        [string]$RemediationState,
+
         [string]$Comment
 
     )
@@ -37,7 +42,8 @@ function Set-CbAlert {
 
     $psObjBody = $jsonBody | ConvertFrom-Json    
 
-    if ($Comment) {$psObjBody | Add-Member -Name "remediation_state" -Value $Comment -MemberType NoteProperty}
+    if ($RemediationState) {$psObjBody | Add-Member -Name "remediation_state" -Value $RemediationState -MemberType NoteProperty}
+    if ($Comment) {$psObjBody | Add-Member -Name "comment" -Value $Comment -MemberType NoteProperty}
 
     $jsonBody = $psObjBody | ConvertTo-Json
 
