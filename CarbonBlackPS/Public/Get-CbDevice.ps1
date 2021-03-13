@@ -97,6 +97,7 @@ function Get-CbDevice {
 
         [int]$ADGroupID,
 
+        [ValidateSet("WINDOWS", "MAC", "LINUX", "OTHER")]
         [string]$OperatingSystem,
 
         [ValidateSet("PENDING", "REGISTERED", "UNINSTALLED", "DEREGISTERED", "ACTIVE", "INACTIVE", "ERROR", "ALL", "BYPASS_ON", "BYPASS", "QUARANTINE", "SENSOR_OUTOFDATE", "DELETED", "LIVE")]
