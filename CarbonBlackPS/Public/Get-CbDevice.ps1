@@ -29,10 +29,10 @@
     Search criteria for VM UUID 
 
     .PARAMETER DeploymentType
-    Search criteria for sensor deployment type; e.g. ENDPOINT
+    Search criteria for sensor deployment type
 
     .PARAMETER TargetPriority
-    Search criteria for target priority; e.g. MEDIUM
+    Search criteria for target priority
 
     .PARAMETER SensorID
     Search criteria for sensor ID
@@ -47,7 +47,7 @@
     Search criteria for operating system
 
     .PARAMETER Status
-    Search criteria for status; e.g. REGISTERED
+    Search criteria for status
    
     .EXAMPLE
     Get-CbDevice -Search "Querystring"
@@ -75,7 +75,7 @@ function Get-CbDevice {
         [Parameter(ParameterSetName='Sort')]
         [string]$SortField,
 
-        [ValidateSet("asc", "desc")]
+        [ValidateSet("ASC", "DESC")]
         [Parameter(ParameterSetName='Sort')]
         [string]$SortOrder,
 
@@ -85,8 +85,10 @@ function Get-CbDevice {
 
         [string]$VMUUID,
 
+        [ValidateSet("ENDPOINT", "WORKLOAD")]
         [string]$DeploymentType,
 
+        [ValidateSet("LOW", "MEDIUM", "HIGH", "MISSION_CRITICAL")]
         [string]$TargetPriority,
 
         [int]$SensorID,
@@ -97,6 +99,7 @@ function Get-CbDevice {
 
         [string]$OperatingSystem,
 
+        [ValidateSet("PENDING", "REGISTERED", "UNINSTALLED", "DEREGISTERED", "ACTIVE", "INACTIVE", "ERROR", "ALL", "BYPASS_ON", "BYPASS", "QUARANTINE", "SENSOR_OUTOFDATE", "DELETED", "LIVE")]
         [string]$Status
 
     )
