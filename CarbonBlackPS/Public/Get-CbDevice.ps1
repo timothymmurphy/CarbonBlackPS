@@ -72,11 +72,9 @@ function Get-CbDevice {
         [int]$Start,
 
         [ValidateSet("target_priority", "policy_name", "name", "last_contact_time", "av_pack_version", "login_user_name", "os_version", "sensor_version", "vm_name", "esx_host_name", "cluster_name", "vm_ip", "vulnerability_severity", "vulnerability_score")]
-        [Parameter(ParameterSetName='Sort')]
         [string]$SortField,
 
         [ValidateSet("ASC", "DESC")]
-        [Parameter(ParameterSetName='Sort')]
         [string]$SortOrder,
 
         [string]$ExcludeVersion,
