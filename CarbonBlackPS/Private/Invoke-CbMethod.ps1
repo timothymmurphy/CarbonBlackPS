@@ -8,8 +8,10 @@ function Invoke-CbMethod {
         [Parameter(Mandatory = $true)]
         [string]$UriPreOrgKey,
 
+        [Parameter(Mandatory = $true)]
         [string]$UriPostOrgKey,
 
+        [Parameter(Mandatory = $true)]
         [string]$Method,
 
         [string]$Body
