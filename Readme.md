@@ -43,3 +43,7 @@ A PowerShell API wrapper for Carbon Black.
 - New-CbAlertNote
 - Get-CbAlertNote
 - Remove-CbAlertNote
+## Live Response API
+- Get-CbLRSession
+- Start-CbLRSession
+- Remove-CbLRSession
