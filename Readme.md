@@ -1,5 +1,3 @@
-###### Actively being developed, expect frequent changes to this repository
-
 # CarbonBlackPS
 A PowerShell API wrapper for Carbon Black.
 
